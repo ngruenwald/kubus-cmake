@@ -16,9 +16,9 @@ kubus_find_package(<PackageName> [version]
                    [FORCE] [EXACT] [QUIET] [REQUIRED])
 ```
 
-The ```FORCE``` option will ignore the cache and always download the package from the server.
-The ```EXACT``` option requests that the version be matched exactly.
-The ```QUIET``` option disables informal messages.
-The ```REQUIRED``` optino stops processing with an error message if the package cannot be found.
+* The ```FORCE``` option will ignore the cache and always download the package from the server.
+* The ```EXACT``` option requests that the version be matched exactly.
+* The ```QUIET``` option disables informal messages.
+* The ```REQUIRED``` option stops processing with an error message if the package cannot be found.
 
 The __kubus_find_package__ function will internally call __find_package__ and forward its arguments.
