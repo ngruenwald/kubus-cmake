@@ -1,6 +1,7 @@
 # kubus.cmake
 
 option(KUBUS "Retrieve packages from Kubus server" OFF)
+option(KUBUS_FORCE "Force download of all packages" OFF)
 
 if(KUBUS)
   if(NOT DEFINED KUBUS_SERVER)
@@ -47,6 +48,10 @@ function(kubus_find_package name)
   endif()
   set(options FORCE EXACT QUIET REQUIRED)
   cmake_parse_arguments(KU "${options}" "${oneValueArgs}" "" ${ARGN})
+
+  if(KUBUS_FORCE)
+    set(KU_FORCE ON)
+  endif()
 
   if(KUBUS)
     kubus_download_package("${name}" "${version}" ${KU_EXACT} ${KU_QUIET} ${KU_FORCE})
