@@ -7,6 +7,7 @@ Retrieve packages from Kubus
 * Enable Kubus by setting the __KUBUS__ option to ON
 * Set the __KUBUS_SERVER__ variable
 * _Optional_: Set your __KUBUS_CACHE_PATH__
+* _Optional_: Set your required platfrom via __KUBUS_PLATFORM__
 
 
 ## Use
